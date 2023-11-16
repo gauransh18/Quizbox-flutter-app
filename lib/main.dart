@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:quizbox/routes/routes.dart';
+import 'package:quizbox/screens/startup.dart';
 import 'package:quizbox/screens/welcome.dart';
 import 'package:quizbox/screens/category.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Welcome(),
+      home: Startup(),
     );
   }
 }

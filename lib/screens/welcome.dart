@@ -17,6 +17,8 @@ class Welcome extends StatefulWidget {
 class _WelcomeState extends State<Welcome> {
   String user_name = "User"; //link to database
 
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,22 +78,6 @@ class _WelcomeState extends State<Welcome> {
                               categoryRoute,
                               context,
                             )
-                            // child: NeoPopButton(
-                            //   color: Colors.white,
-                            //   onTapDown: () => HapticFeedback.selectionClick(),
-                            //   onTapUp: () => HapticFeedback.selectionClick(),
-                            //   child: Padding(
-                            //     padding: EdgeInsets.symmetric(
-                            //         horizontal: 20, vertical: 15),
-                            //     child: Row(
-                            //       mainAxisAlignment: MainAxisAlignment.center,
-                            //       children: [
-                            //         Text("Continue"),
-                            //         Icon(Icons.arrow_forward_ios_rounded)
-                            //       ],
-                            //     ),
-                            //   ),
-                            // ),
                             ),
                       ],
                     ),

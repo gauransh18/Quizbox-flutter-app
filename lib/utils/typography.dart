@@ -45,4 +45,15 @@ Widget typoC(String headingText, double size, String font, Color color) {
   );
 }
 
+Widget typoC2(String headingText, double size, String font, Color color, TextAlign align) {
+  return Text(headingText,
+    textAlign: align,
+    style: GoogleFonts.getFont(font,
+      fontSize: size,
+      color: color,
+    ),
+    
+  );
+}
+
 

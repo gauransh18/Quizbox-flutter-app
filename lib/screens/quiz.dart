@@ -478,7 +478,7 @@ class _QuizSpaceState extends State<QuizSpace> {
                 SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.only(left: 12.0),
-                  child: typoH("Sports"),
+                  child: typoH("Space"),
                 ),
                 SizedBox(height: 20),
                 FutureBuilder<String>(
@@ -781,7 +781,7 @@ class _QuizMovieState extends State<QuizMovie> {
                 SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.only(left: 12.0),
-                  child: typoH("Sports"),
+                  child: typoH("Movies"),
                 ),
                 SizedBox(height: 20),
                 FutureBuilder<String>(
@@ -1093,7 +1093,7 @@ class _QuizCodingState extends State<QuizCoding> {
                 SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.only(left: 12.0),
-                  child: typoH("Sports"),
+                  child: typoH("Coding"),
                 ),
                 SizedBox(height: 20),
                 FutureBuilder<String>(

@@ -34,11 +34,6 @@ class _CategorySelectionState extends State<CategorySelection> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        foregroundColor: Colors.white70,
-        backgroundColor: Colors.transparent,
-      ),
       backgroundColor: Color.fromARGB(255, 17, 17, 17),
       body: Stack(
         children: [
@@ -113,10 +108,10 @@ class _CategorySelectionState extends State<CategorySelection> {
                                   right: 20.0,
                                 ),
                                 child: getNeoPopButton(
-                                  "Sports Bazzi",
+                                  "Sports Quiz",
                                   Color.fromARGB(255, 227, 226, 226),
                                   Colors.black,
-                                  categoryRoute,
+                                  sportsQuizRoute,
                                   context,
                                 )),
                                 SizedBox(height: 20),
@@ -126,10 +121,10 @@ class _CategorySelectionState extends State<CategorySelection> {
                                   right: 20.0,
                                 ),
                                 child: getNeoPopButton(
-                                  "Space Bazzi",
+                                  "Space Quiz",
                                   Color.fromARGB(255, 227, 226, 226),
                                   Colors.black,
-                                  categoryRoute,
+                                  spaceQuizRoute,
                                   context,
                                 )),
                                 SizedBox(height: 20),
@@ -139,10 +134,10 @@ class _CategorySelectionState extends State<CategorySelection> {
                                   right: 20.0,
                                 ),
                                 child: getNeoPopButton(
-                                  "Movie Bazzi",
+                                  "Movie Quiz",
                                   Color.fromARGB(255, 227, 226, 226),
                                   Colors.black,
-                                  categoryRoute,
+                                  movieQuizRoute,
                                   context,
                                 )),
                                 SizedBox(height: 20),
@@ -152,10 +147,10 @@ class _CategorySelectionState extends State<CategorySelection> {
                                   right: 20.0,
                                 ),
                                 child: getNeoPopButton(
-                                  "Coding Bazzi",
+                                  "Coding Quiz",
                                   Color.fromARGB(255, 227, 226, 226),
                                   Colors.black,
-                                  categoryRoute,
+                                  codingQuizRoute,
                                   context,
                                 )),
                           ],

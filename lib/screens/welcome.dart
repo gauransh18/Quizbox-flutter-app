@@ -15,7 +15,6 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
-
   String user_name = "User"; //link to database
 
   @override
@@ -70,10 +69,11 @@ class _WelcomeState extends State<Welcome> {
                           child: Padding(
                             padding: const EdgeInsets.all(20.0),
                             child: typoC(
-                                "Hi $user_name! Get ready for the Ultimate Quiz Challenge. Click below to continue your journey of knowledge and fun!",
-                                22,
-                                "Sanchez",
-                                Colors.white70),
+                              "Hi $user_name! Get ready for the Ultimate Quiz Challenge. Click below to continue your journey of knowledge and fun!",
+                              22,
+                              "Sanchez",
+                              const Color.fromARGB(255, 237, 237, 237),
+                            ),
                           ),
                         ),
                         SizedBox(
@@ -90,8 +90,7 @@ class _WelcomeState extends State<Welcome> {
                               Colors.black,
                               categoryRoute,
                               context,
-                            )
-                            ),
+                            )),
                       ],
                     ),
                   ),

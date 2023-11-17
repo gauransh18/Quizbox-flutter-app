@@ -44,7 +44,7 @@ class _StartupState extends State<Startup> {
                   "Welcome",
                   55,
                   "Sanchez",
-                  Colors.white70,
+                  const Color.fromARGB(255, 237, 237, 237),
                 ),
                 Spacer(),
                 Padding(
@@ -56,7 +56,7 @@ class _StartupState extends State<Startup> {
                         child: TextField(
                           controller: _nameController,
                           decoration: const InputDecoration(
-                            fillColor: Color.fromARGB(255, 209, 209, 209),
+                            fillColor: const Color.fromARGB(255, 237, 237, 237),
                             filled: true,
                             labelText: "Enter your name",
                             labelStyle: TextStyle(
@@ -77,7 +77,7 @@ class _StartupState extends State<Startup> {
                       const SizedBox(width: 12.0),
                       getNeoPopButtonF(
                         "",
-                        Color.fromARGB(255, 209, 209, 209),
+                        const Color.fromARGB(255, 237, 237, 237),
                         Colors.black,
                         welcomeRoute,
                         context,

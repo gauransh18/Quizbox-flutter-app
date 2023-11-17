@@ -60,9 +60,9 @@ Widget getSubmitButton(BuildContext context, Function onPressed, String text) {
       },
       onTapUp: () => HapticFeedback.selectionClick(),
       child: Container(
-        // Wrap the content in a Container to set the width and height
-        width: 150, // Set your desired width
-        height: 50, // Set your desired height
+      
+        width: 150, 
+        height: 50, 
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20),
           child: Row(

@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 import 'package:quizbox/routes/routes.dart';
 import 'package:quizbox/utils/buttons.dart';
 import 'package:quizbox/utils/typography.dart';
@@ -13,7 +14,23 @@ class CategorySelection extends StatefulWidget {
 }
 
 class _CategorySelectionState extends State<CategorySelection> {
+
   String user_name = "User"; //link to database
+
+  @override
+  void initState() {
+    super.initState();
+    _loadUserName();
+  }
+
+  Future<void> _loadUserName() async {
+    final box = Hive.box('db');
+    final savedUserName = box.get('user_name');
+    setState(() {
+      user_name = savedUserName ?? "User";
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,7 +113,7 @@ class _CategorySelectionState extends State<CategorySelection> {
                                   right: 20.0,
                                 ),
                                 child: getNeoPopButton(
-                                  "Continue",
+                                  "Sports Bazzi",
                                   Color.fromARGB(255, 227, 226, 226),
                                   Colors.black,
                                   categoryRoute,
@@ -109,7 +126,7 @@ class _CategorySelectionState extends State<CategorySelection> {
                                   right: 20.0,
                                 ),
                                 child: getNeoPopButton(
-                                  "Continue",
+                                  "Space Bazzi",
                                   Color.fromARGB(255, 227, 226, 226),
                                   Colors.black,
                                   categoryRoute,
@@ -122,7 +139,7 @@ class _CategorySelectionState extends State<CategorySelection> {
                                   right: 20.0,
                                 ),
                                 child: getNeoPopButton(
-                                  "Continue",
+                                  "Movie Bazzi",
                                   Color.fromARGB(255, 227, 226, 226),
                                   Colors.black,
                                   categoryRoute,
@@ -135,7 +152,7 @@ class _CategorySelectionState extends State<CategorySelection> {
                                   right: 20.0,
                                 ),
                                 child: getNeoPopButton(
-                                  "Continue",
+                                  "Coding Bazzi",
                                   Color.fromARGB(255, 227, 226, 226),
                                   Colors.black,
                                   categoryRoute,

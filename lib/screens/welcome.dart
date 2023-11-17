@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:neopop/neopop.dart';
+import 'package:hive/hive.dart';
 import 'package:quizbox/routes/routes.dart';
 import 'package:quizbox/utils/buttons.dart';
 import 'package:quizbox/utils/typography.dart';
@@ -15,9 +15,22 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
+
   String user_name = "User"; //link to database
 
-  
+  @override
+  void initState() {
+    super.initState();
+    _loadUserName();
+  }
+
+  Future<void> _loadUserName() async {
+    final box = Hive.box('db');
+    final savedUserName = box.get('user_name');
+    setState(() {
+      user_name = savedUserName ?? "User";
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

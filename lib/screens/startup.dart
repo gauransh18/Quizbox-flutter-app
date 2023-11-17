@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 import 'package:quizbox/routes/routes.dart';
 import 'package:quizbox/utils/buttons.dart';
 import 'package:quizbox/utils/typography.dart';
@@ -15,6 +16,7 @@ class Startup extends StatefulWidget {
 class _StartupState extends State<Startup> {
   final TextEditingController _nameController = TextEditingController();
   String user_name = "User"; //link to database
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,8 +81,10 @@ class _StartupState extends State<Startup> {
                         Colors.black,
                         welcomeRoute,
                         context,
-                        (){
+                        () async {
                           user_name = _nameController.text;
+                          if(user_name == "") user_name = "User";
+                          await _saveUserNameToHive(user_name);
                           // print(user_name);
                         }
                       ),
@@ -93,5 +97,10 @@ class _StartupState extends State<Startup> {
         ],
       ),
     );
+  }
+  
+  Future<void> _saveUserNameToHive(userName) async {
+   final box = Hive.box('db');
+    box.put('user_name', userName);
   }
 }
